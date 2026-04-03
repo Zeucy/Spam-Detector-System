@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Detector</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="description" content="A dynamic, AI-powered Spam Detector">
+</head>
+
+<body>
+
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <main class="container">
+        <div class="glass-panel">
+            <header class="header">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="shield-icon">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <h1>Spam Detector</h1>
+                </div>
+                <p class="subtitle">AI-powered threat detection for your messages</p>
+            </header>
+
+            <form id="detect-form" class="form">
+                <div class="input-group">
+                    <label for="message-input">Message Content</label>
+                    <textarea id="message-input" placeholder="Type or paste the message you want to verify..." rows="5"
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-btn">
+                    <span class="btn-text">Analyze Message</span>
+                    <div class="spinner" id="spinner"></div>
+                </button>
+            </form>
+
+            <div id="result-container" class="result-container hidden">
+                <div class="result-card" id="result-card">
+                    <div class="result-header">
+                        <h2 id="result-title">Result</h2>
+                        <span class="confidence-badge" id="confidence-badge">99%</span>
+                    </div>
+                    <p class="result-desc" id="result-desc">Processing...</p>
+
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
