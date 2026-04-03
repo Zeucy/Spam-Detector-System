@@ -8,6 +8,12 @@ A lightweight, machine-learning-powered web application that detects whether a g
 - **Fast Web Backend**: A lightweight `Flask` API backend.
 - **Premium Frontend**: A beautifully engineered "glassmorphism" aesthetic built with Vanilla JS, dark mode HTML/CSS, and zero bulky frontend frameworks.
 
+## 🌐 Live Demo
+
+You can try out the live version of this project hosted on Vercel here:
+**[👉 Click here to view the Live Website](https://spam-detector-system.vercel.app)**
+
+
 ---
 
 ## 🛠️ How to Download and Run the Project
